@@ -14,7 +14,7 @@ Pros:
 - docker-compose can effortlessly distribute these .env files to the containers that need them.
 
 Cons:
-- Vite uses dotenv to read an .env file from the *Astro* project root, not the global project root. I'd need a way to either point dotenv at an .env file in a different directory, or somehow get the `env/.env-astro` file auto-copied or symlinked into the Astro project root. (I think I just answered my own question: symlink the .env-astro file)
+- Vite uses dotenv to read an .env file from the *Astro* project root, not the global project root. I'd need a way to either point dotenv at an .env file in a different directory, or somehow get the `env/.env-astro` file auto-copied or hard-linked into the Astro project root. (I think I just answered my own question: hard-link the .env-astro file)
 - If I'm using multiple .env files then I'm still not using a *single* source of truth. I need something that generates the .env files on-the-fly from a single config file. A custom git command, perhaps? Node script? I'll think about it.
 
 ## Snippets
