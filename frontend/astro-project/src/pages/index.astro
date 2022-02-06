@@ -1,5 +1,7 @@
 ---
-// Component imports and setup JavaScript go here!
+const {
+	PUBLIC_HELLO_WORLD
+} = import.meta.env
 ---
 
 <html lang="en">
@@ -15,5 +17,8 @@
 
 	<body>
 		<h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
+		<p>
+			Also, { PUBLIC_HELLO_WORLD }
+		</p>
 	</body>
 </html>
